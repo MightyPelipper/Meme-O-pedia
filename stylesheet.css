@@ -1,0 +1,151 @@
+/*body presets to make it look nice*/
+body{
+    
+    background-image: url("pics/grad.jpg");
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 2000px 2000px;
+    /*margin: auto;*/
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+/*this is for the header bat at the top of the page*/
+.header{
+
+    background-color: rgb(92, 121, 218);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    background: url("pics/header.jpg");
+    background-repeat: no-repeat;
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+}
+
+/*navbar below the header*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+  
+  /* Change the link color to black on hover */
+li a:hover {
+    background-color: #111;
+  }
+
+/*SearchBar Stuff*/
+
+ul .search-container{
+  float: right;
+}
+
+ul input[type=text] {
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+
+
+
+
+
+/* login form CSS */
+
+/* Create two unequal columns that split the site into two sections  */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 50%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: right;
+    width: 40%;
+    padding-left: 10px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    background-image: url("pics/shek.jpg");
+    width: 90%;
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: #303852;
+     padding: 20px;
+     margin-top: 20px;
+     border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /*Social Media buttons*/
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  

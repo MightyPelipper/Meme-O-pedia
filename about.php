@@ -11,13 +11,14 @@
 </head>
 
 <title>
-    Home
+    About Us
 </title>
 
 
 
 <body>
 
+    <!--Header-->
     <div class="header">
         <h1>Meme-o-pedia</h1>
     </div>
@@ -35,4 +36,28 @@
             
         </div>
     </ul> 
+    <!--Actual content-->
+
+    <h1 class="textwhite" align="center">About Us!</h1>
+
+    
+
+    <div class="textwhite">
+            <img src="pics/drake_for_about.jpg" alt="LOL" width="374" height="225">
+           <div>
+            <br/>
+            We are young kids at Metropolitan State Univeristy trying to graduate.
+            Making, looking, and using memes is one of our favorite hobby. We
+            want everyone to enjoy memes as much as we do. We hope all the memes
+            on this page will bring everyone together and make everyones day better
+            </div>
+    </div>
+
+    <div class="card">
+      <h3>Follow Us</h3>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <p>Keep up to date with the crew here at and interact with us on social media</p>
+    </div>
+    
 </body>

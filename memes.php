@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
 

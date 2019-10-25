@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Home
+    Feedback
 </title>
 
 
@@ -35,4 +35,39 @@
             
         </div>
     </ul> 
+    <!--Actual content-->
+
+    <h1 class="textwhite" align="center">Feedback</h1>
+
+<!--feedback form on the right side-->
+
+<div class="leftcolumn">
+
+<div class="card">   
+        <form>
+            <div class="card">
+                
+                <div>
+                    <label for="usename">Username:</label>
+                    <input type="text" id="Username" name="username" placeholder="Username">
+                </div>
+
+                <div>
+                    <label for="Range">Star Rating:</label>
+                    <input type="range" min="1" max="5" value="0" class="slider" id="Range">
+                </div>
+                
+                <div>
+                <label for="Comment">Star Rating:</label>
+                <textarea id="Comment" rows="4" cols="50" name="comment" form="usrform">Enter comment here...</textarea>
+                
+                </div>
+                <div><input type="submit" value="submit"></div>
+
+            </div>
+        </form>
+</div>
+</div>
+
+
 </body>

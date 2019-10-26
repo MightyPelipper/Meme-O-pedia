@@ -26,7 +26,7 @@ body{
 }
 
 /*navbar below the header*/
-ul {
+.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@ ul {
     
   }
   
-li {
+.navbarlistpos {
     float: left;
   }
   
@@ -76,6 +76,22 @@ ul input[type=text] {
 
 /* login form CSS */
 
+.regbutton{
+  background-color: #55ACEE;
+  border: none;
+  color: white;
+  padding: 9px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+
+
 /* Create two unequal columns that split the site into two sections  */
 /* Left column */
 .leftcolumn {   
@@ -90,7 +106,7 @@ ul input[type=text] {
     padding-left: 10px;
   }
   
-  /* Fake image */
+  /* Fake image for place holding */
   .fakeimg {
     background-color: #aaa;
     background-image: url("pics/shek.jpg");
@@ -102,6 +118,49 @@ ul input[type=text] {
     border-top-right-radius: 30px;
     
   }
+
+  /* wooloo front page image */
+  .wooloo {
+    background-color: #aaa;
+    background-image: url("pics/wooloo.jpg");
+    background-position: center; 
+    width: 90%;
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    
+  }
+
+  /* wooloo front page image */
+  .spongebob {
+    background-color: #aaa;
+    background-image: url("pics/spongebob.jpg");
+    background-position: center; 
+    width: 90%;
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    
+  }
+  
+  /*Trending Tab images*/
+  .trend {
+    background-color: #876799;
+    background-position: center; 
+    width: 90%;
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    
+  }
+  
+  
   
   /* Add a card effect for articles */
   .card {

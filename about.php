@@ -24,11 +24,11 @@
     </div>
 
     <!--navbar--->
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="memes.php">Memes</a></li>
-        <li><a href="feedback.php">feedback</a></li>
-        <li><a href="about.php">About</a></li>
+    <ul class="navbar">
+        <li class="navbarlistpos"><a href="index.php">Home</a></li>
+        <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
+        <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
+        <li class="navbarlistpos"><a href="about.php">About</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">

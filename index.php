@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Home is here
+    Home
 </title>
 
 
@@ -23,11 +23,11 @@
     </div>
 
     <!--navbar--->
-    <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="memes.php">Memes</a></li>
-        <li><a href="feedback.php">feedback</a></li>
-        <li><a href="about.php">About</a></li>
+    <ul class="navbar">
+        <li class="navbarlistpos"><a href="index.php">Home</a></li>
+        <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
+        <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
+        <li class="navbarlistpos"><a href="about.php">About</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -43,18 +43,20 @@
   <div class="leftcolumn">
 
         <div class="card">
-            <h2>TITLE HEADING</h2>
+            <h2>Cutest Thing in Pokemon?</h2>
             <h5>Title description, Oct 18, 2019</h5>
-            <div class="fakeimg" style="height:200px;">Image </div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <div class="wooloo" style="height:200px;"> </div>
+            <p>Just look at it! Who would not want to hug that bundle of happiness?!</p>
+            <p>Wooloo is a Normal-type Pokémon set to debut in the eight generation of Pokémon games, Pokémon Sword and Shield. 
+              After it was revealed in the June 5th, 2019 Nintendo Direct for the games, it quickly became a favorite among Pokémon fans, 
+              who appreciated its cute design. </p>
         </div>
 
         <div class="card">
-            <h2>TITLE HEADING</h2>
+            <h2>Mr. Stark I Don't Feel So Good</h2>
             <h5>Title description, Oct 20, 2019</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
+            <div class="spongebob" style="height:200px;"></div>
+            <p>Fading away is the new hype.</p>
             <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
         </div>
 
@@ -70,15 +72,17 @@
         Username: <input type="text" name="username" ><br>
         Password: <input type="text" name="password"><br>
         <input type="submit" value="submit">
-      <p>Some text..</p>
+      <p>Don't have an account? Register!</p>
     </form>
+    <a href="register.php" class="regbutton">Register</a>
+    
     </div>
    <!--trending tab--> 
     <div class="card">
       <h3>Trending</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
+      <div class="trend">Dancing Joker</div><br>
+      <div class="trend">Suprised Pikachu</div><br>
+      <div class="trend">Todd Howard</div>
     </div>
 
     <!--social media buttons-->

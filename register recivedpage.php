@@ -9,13 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 </head>
-<?php
-$username = $_POST['username'];
-$password = $_POST['passowrd'];
 
-
-	
-?>
 <title>
     Home
 </title>
@@ -34,7 +28,6 @@ $password = $_POST['passowrd'];
         <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
         <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
-        <li class="navbarlistpos"><a href="register.php">register</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -42,25 +35,21 @@ $password = $_POST['passowrd'];
             
         </div>
     </ul> 
-
-    <!--Actual content-->
-
-    <h1 class="registration" align="center">registration</h1>
-
-    
-
     <div class="card">
-    <form action="register recivedpage.php" method="post" id="search">
-<p><b>Username:</b><input type="str" name ="username" id="username" value="<?php echo $username?>"/></p><br>
-<div>
-            <br/>
-            password has no restriction but we are not responsible if your account is
-            compramised, or banned due to others actions.
-            </div>
-<p><b>Username:</b><input type="str" name ="passowrd" id="passowrd" value="<?php echo $password?>"/></p><br>
-<input type="submit" name="submit" value=" submit"/>
-</form>  
-    </div>
+    <?php
+        $password = $_POST['password'];
+        $username = $_POST['username'];
+
+        
+        echo " this is you password" .$password;
+        echo "this is your username".$username;
+        echo " we have no way of reseting your password at this time do not forget it."
 
     
+
+
+
+
+    ?>
+    </div>
 </body>

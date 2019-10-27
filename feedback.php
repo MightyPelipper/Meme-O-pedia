@@ -58,7 +58,7 @@
                 </div>
                 
                 <div>
-                <label for="Comment">Star Rating:</label>
+                <label for="Comment">Comment:</label>
                 <textarea id="Comment" rows="4" cols="50" name="comment" form="usrform">Enter comment here...</textarea>
                 
                 </div>

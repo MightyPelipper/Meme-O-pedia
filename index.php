@@ -68,13 +68,19 @@
   <div class="card">
 
   <!--login form-->
-    <form>
+    
+    <form class="loginInput">
       <h3>Login</h3>
-        Username: <input type="text" name="username" ><br>
-        Password: <input type="text" name="password"><br>
-        <input type="submit" value="submit">
-      <p>Don't have an account? Register!</p>
+         <p>Username</p>
+         <input type="text" name="username" placeholder="Username" ><br>
+
+         <p>Password</p>
+         <input type="text" name="password" placeholder="Password"><br>
+         
+        <input type="submit" value="submit" class="loginbutton">
+      
     </form>
+    <p>Don't have an account? Register!</p>
     <a href="register.php" class="regbutton">Register</a>
     
     </div>

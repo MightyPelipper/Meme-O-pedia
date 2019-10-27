@@ -11,6 +11,13 @@ body{
     margin-left: 200px;
 }
 
+/*makes text white and changes font*/
+.textwhite{
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+
+}
+
 /*this is for the header bat at the top of the page*/
 .header{
 
@@ -75,6 +82,33 @@ ul input[type=text] {
 
 
 /* login form CSS */
+
+.loginInput{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:rgb(56, 55, 55);
+
+}
+
+.loginbutton{
+  background-color: rgb(123, 166, 172);
+  border: none;
+  color: white;
+  padding: 9px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
 
 .regbutton{
   background-color: #55ACEE;

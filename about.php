@@ -29,7 +29,6 @@
         <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
         <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
-        <li class="navbarlistpos"><a href="register.php">register</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -44,7 +43,7 @@
     
 
     <div class="textwhite">
-            <img src="pics/drake_for_about.jpg" alt="LOL" width="374" height="225">
+            <img src="pics/wuh.jpg" alt="LOL" width="374" height="225">
            <div>
             <br/>
             We are young kids at Metropolitan State Univeristy trying to graduate.

@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
 
@@ -28,7 +28,6 @@
         <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
         <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
-        <li class="navbarlistpos"><a href="register.php">register</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -42,33 +41,29 @@
 
 <!--feedback form on the right side-->
 
-<div class="leftcolumn">
 
-<div class="card">   
-        <form>
-            <div class="card">
-                
-                <div>
+        <div class="card">
+        <form class="loginInput">
+              <div class="form">  
+                <div class="container">
                     <label for="usename">Username:</label>
                     <input type="text" id="Username" name="username" placeholder="Username">
-                </div>
+                    
 
-                <div>
+                    
                     <label for="Range">Star Rating:</label>
-                    <input type="range" min="1" max="5" value="0" class="slider" id="Range">
+                    <input type="range" min="1" max="5" value="0" class="slider" id="Range"><br><br>
+                    
+                    
+                    
+                    <label for="Comment">Comment:</label><br>
+                    <textarea id="Comment" rows="4" cols="50" name="comment" form="usrform">Enter comment here...</textarea><br><br>
+                    
+                    
+                    <input class="regbutton" type="submit" value="submit">
                 </div>
-                
-                <div>
-                <label for="Comment">Comment:</label>
-                <textarea id="Comment" rows="4" cols="50" name="comment" form="usrform">Enter comment here...</textarea>
-                
-                </div>
-                <div><input type="submit" value="submit"></div>
-
             </div>
         </form>
-</div>
-</div>
 
 
 </body>

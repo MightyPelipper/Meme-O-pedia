@@ -36,20 +36,6 @@
         </div>
     </ul> 
     <div class="card">
-    <?php
-        $password = $_POST['password'];
-        $username = $_POST['username'];
-
-        
-        echo " this is you password" .$password;
-        echo "this is your username".$username;
-        echo " we have no way of reseting your password at this time do not forget it."
-
     
-
-
-
-
-    ?>
     </div>
 </body>

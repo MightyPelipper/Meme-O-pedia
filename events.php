@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Memes
+    Events
 </title>
 
 

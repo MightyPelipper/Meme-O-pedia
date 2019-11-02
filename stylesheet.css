@@ -76,12 +76,18 @@ ul input[type=text] {
   font-size: 17px;
 }
 
+#searchbar{
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  font-size: 17px;
+}
 
 
 
 
 
-/* login form CSS */
+/* login form and registration form CSS */
 
 .loginInput{
   width: 100%;
@@ -122,6 +128,53 @@ ul input[type=text] {
   margin: 4px 2px;
   cursor: pointer;
   list-style-type: none;
+}
+
+/* width for inputs  */
+form input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/*navbar for memes page*/
+.memebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  background-color: #000000;
+}
+
+.memebarlistpos {
+  float: left;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
 }
 
 

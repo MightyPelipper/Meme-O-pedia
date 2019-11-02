@@ -25,7 +25,7 @@
     <!--navbar--->
     <ul class="navbar">
         <li class="navbarlistpos"><a href="index.php">Home</a></li>
-        <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
+        <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
         <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
         <div class="search-container">

@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Memes
+    Catagory
 </title>
 
 
@@ -50,6 +50,7 @@
         <li class="memelistpos"><a href="events.php">Events</a></li>
         <li class="memelistpos"><a href="people.php">People</a></li>
         <li class="memelistpos"><a href="memes.php">Memes</a></li>
+        <li class="memelistpos"><a href="includes/test.php">test database button</a></li>
         
       </ul> 
 

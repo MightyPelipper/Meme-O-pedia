@@ -158,6 +158,26 @@ form input[type=password]{
 }
 
 
+/*navbar for memes page*/
+.memebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  background-color: #000000;
+}
+
+.memebarlistpos {
+  float: left;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
 
 /* Create two unequal columns that split the site into two sections  */
 /* Left column */

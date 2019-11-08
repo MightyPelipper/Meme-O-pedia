@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Feedback
+    Post Meme
 </title>
 
 
@@ -35,35 +35,48 @@
             
         </div>
     </ul> 
-    <!--Actual content-->
 
-    <h1 class="textwhite" align="center">Feedback</h1>
+<!--Submission Form-->
 
-<!--feedback form on the right side-->
+<h1 class="textwhite" align="center">Meme Submission</h1>
+
+<div class="row">
+
+<div class="leftcolumn">
+<div class="card">
+     
+     <form class="loginInput" action="includes/postmeme.inc.php" method="POST">
+     
+        <label for="catagory">Select Catagory:</label><br>
+        <select id="catagory" name="memecatagory">
+            <option value="Event">Event</option>
+            <option value="People">People</option>
+            <option value="Memes">Meme</option>
+        </select><br><br>
+
+        <label for="description">description:</label><br>
+        <input type="text" id="description"  name="memetext" ><br><br>
+
+        <label for="fileselect">Image:</label><br>
+        <input type="file" name="memepic" id="fileselect"><br><br>
+
+        <button class="regbutton" type="submit" name="submit" value="submit">submit</button>
 
 
-        <div class="card">
-        <form class="loginInput" action="includes/feedback.inc.php" method="POST">
-              <div class="form">  
-                <div class="container">
-                    <label for="username">Username:</label>
-                    <input type="text" id="Username" name="username" placeholder="Username">
-                    
+     <form>
 
-                    
-                    
-                    
-                    
-                    
-                    <label for="Comment">Comment:</label><br>
-                    <input type="text" id="Comment"  name="comment" ><br><br>
-                    
-                    
-                   
-                    <button class="regbutton" type="submit" name="submit" value="submit">submit</button>
-                </div>
-            </div>
-        </form>
+
+
+</div>
+
+</div>
+</div>
+
+
+
 
 
 </body>
+
+
+

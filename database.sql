@@ -35,7 +35,7 @@ create table Memes (
 
     meme_id int(11) not null Auto_increment,
     meme_catagory char(20),
-    meme_text char(256),
+    meme_text char(128),
     meme_pic blob, 
     user_id int(11),
     foreign key (user_id) references User(user_id),
@@ -44,14 +44,16 @@ create table Memes (
 
 );
 
+insert into Memes values ()
+
 /*feedback table*/
 
 create table Feedback (
 
     feed_id int(11) not null Auto_increment,
     feed_user char(20),
-    feed_comm char(256),
-    primary key (meme_id)
+    feed_comm char(128),
+    primary key (feed_id)
 
 );
  

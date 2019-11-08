@@ -59,4 +59,31 @@
 
 </div>
 </div>
+
+<!--Test posts from MYSQL-->
+
+<?php
+
+
+            include_once 'includes/dbh.inc.php';
+            
+            $sql = "SELECT * FROM Memes";
+
+            $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
+
+            echo "<table border='1'>";
+            echo "<tr><td>meme_ID</td> <td>catagory</td> <td>memetext</td> <td>picture</td> </tr>";
+
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "<tr> 
+                <td>{$row['meme_id']}</td> <td>{$row['meme_catagory']}</td> <td>{$row['meme_text']}</td> <td>{$row['meme_pic']}</td>
+
+                </tr>";
+            }
+            echo "</table>"
+
+            
+  ?>          
+
+
 </body>

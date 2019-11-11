@@ -15,6 +15,23 @@ create table Users (
     primary key (user_id)
 );
 
+
+/*real user table*/
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `user_first` char(26) NOT NULL,
+  `user_last` char(26) NOT NULL,
+  `user_email` tinytext NOT NULL,
+  `user_uid` tinytext NOT NULL,
+  `user_pwd` longtext NOT NULL,
+  primary key (user_id)
+  
+);
+
+
+
+
 insert into Users values( 1, 'samir', 'mahamed', '123big@gmail.com', 'admin', 'password', TRUE);
 
 /*comments table*/

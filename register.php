@@ -42,7 +42,7 @@
 
 
     <div class="card">
-    <form class="loginInput" action="includes/register.inc.php" method="POST" >
+    <form class="loginInput" action="includes/register2.inc.php" method="POST" >
         <div class="form">
 
         <div class="container">

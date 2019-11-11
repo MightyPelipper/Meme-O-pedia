@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
@@ -64,25 +69,7 @@
 
   <div class="rightcolumn">
 
-  <div class="card">
-
-  <!--login form-->
-    
-    <form class="loginInput">
-      <h3>Login</h3>
-         <p>Username</p>
-         <input type="text" name="username" placeholder="Username" ><br>
-
-         <p>Password</p>
-         <input type="text" name="password" placeholder="Password"><br>
-         
-        <input type="submit" value="submit" class="loginbutton">
-      
-    </form>
-    <p>Don't have an account? Register!</p>
-    <a href="register.php" class="regbutton">Register</a>
-    
-    </div>
+  
    <!--trending tab--> 
     <div class="card">
       <h3>Trending</h3>
@@ -97,6 +84,12 @@
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <p>Some text..</p>
+    </div>
+
+  <div class="card">
+  <!--login form-->
+    <p>Admin Login</p>
+    <a href="login.php" class="regbutton">Admin Login</a>
     </div>
 
   </div>

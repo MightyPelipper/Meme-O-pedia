@@ -10,6 +10,8 @@ if (isset($_POST['submit'])){
     $text = mysqli_real_escape_string($conn, $_POST['memetext']);
     $pic = mysqli_real_escape_string($conn, $_POST['memepic']);
     
+    //store image
+    
 
     
     //error handelers

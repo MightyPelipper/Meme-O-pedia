@@ -11,6 +11,13 @@ body{
     margin-left: 200px;
 }
 
+/*makes text white and changes font*/
+.textwhite{
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+
+}
+
 /*this is for the header bat at the top of the page*/
 .header{
 
@@ -69,12 +76,45 @@ ul input[type=text] {
   font-size: 17px;
 }
 
+#searchbar{
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  font-size: 17px;
+}
 
 
 
 
 
-/* login form CSS */
+/* login form and registration form CSS */
+
+.loginInput{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:rgb(56, 55, 55);
+
+}
+
+.loginbutton{
+  background-color: rgb(123, 166, 172);
+  border: none;
+  color: white;
+  padding: 9px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  list-style-type: none;
+}
+
 
 .regbutton{
   background-color: #55ACEE;
@@ -88,6 +128,53 @@ ul input[type=text] {
   margin: 4px 2px;
   cursor: pointer;
   list-style-type: none;
+}
+
+/* width for inputs  */
+form input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/*navbar for memes page*/
+.memebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  background-color: #000000;
+}
+
+.memebarlistpos {
+  float: left;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
 }
 
 

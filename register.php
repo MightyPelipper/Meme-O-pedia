@@ -9,15 +9,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 </head>
-<?php
-$username = $_POST['username'];
-$password = $_POST['passowrd'];
 
-
-	
-?>
 <title>
-    Home
+    Register
 </title>
 
 
@@ -31,10 +25,9 @@ $password = $_POST['passowrd'];
     <!--navbar--->
     <ul class="navbar">
         <li class="navbarlistpos"><a href="index.php">Home</a></li>
-        <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
+        <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
         <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
-        <li class="navbarlistpos"><a href="register.php">register</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -45,21 +38,35 @@ $password = $_POST['passowrd'];
 
     <!--Actual content-->
 
-    <h1 class="registration" align="center">registration</h1>
+    <h1 class="textwhite" align="center">Register</h1>
 
-    
 
     <div class="card">
-    <form action="register recivedpage.php" method="post" id="search">
-<p><b>Username:</b><input type="str" name ="username" id="username" value="<?php echo $username?>"/></p><br>
-<div>
-            <br/>
-            password has no restriction but we are not responsible if your account is
-            compramised, or banned due to others actions.
-            </div>
-<p><b>Username:</b><input type="str" name ="passowrd" id="passowrd" value="<?php echo $password?>"/></p><br>
-<input type="submit" name="submit" value=" submit"/>
-</form>  
+    <form class="loginInput" action="includes/register2.inc.php" method="POST" >
+        <div class="form">
+
+        <div class="container">
+            <div class="textWhite"><h2>Create Account</h2></div>
+
+            <label for="first"><b>First</b></label>
+            <input type="text" placeholder="First Name" name="first" >
+
+            <label for="Last"><b>Last</b></label>
+            <input type="text" placeholder="Last Name" name="last" >
+            
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="E-mail" name="email" >
+
+            <label for="uid"><b>Username</b></label>
+            <input type="text" placeholder="Username" name="uid" >
+
+            <label for="pwd"><b>Password</b></label>
+            <input type="password" placeholder="Password" name="pwd" >
+
+            <button class="regbutton" type="submit" name="submit">Create User</button>
+        </div>
+        </div>
+    </form>
     </div>
 
     

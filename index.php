@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
@@ -25,10 +30,9 @@
     <!--navbar--->
     <ul class="navbar">
         <li class="navbarlistpos"><a href="index.php">Home</a></li>
-        <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
-        <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
+        <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
+        <li class="navbarlistpos"><a href="feedback.php">Feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
-        <li class="navbarlistpos"><a href="register.php">register</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -65,19 +69,7 @@
 
   <div class="rightcolumn">
 
-  <div class="card">
-
-  <!--login form-->
-    <form>
-      <h3>Login</h3>
-        Username: <input type="text" name="username" ><br>
-        Password: <input type="text" name="password"><br>
-        <input type="submit" value="submit">
-      <p>Don't have an account? Register!</p>
-    </form>
-    <a href="register.php" class="regbutton">Register</a>
-    
-    </div>
+  
    <!--trending tab--> 
     <div class="card">
       <h3>Trending</h3>
@@ -92,6 +84,12 @@
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <p>Some text..</p>
+    </div>
+
+  <div class="card">
+  <!--login form-->
+    <p>Admin Login</p>
+    <a href="login.php" class="regbutton">Admin Login</a>
     </div>
 
   </div>

@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
 
@@ -25,10 +25,9 @@
     <!--navbar--->
     <ul class="navbar">
         <li class="navbarlistpos"><a href="index.php">Home</a></li>
-        <li class="navbarlistpos"><a href="memes.php">Memes</a></li>
+        <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
         <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
-        <li class="navbarlistpos"><a href="register.php">register</a></li>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -42,33 +41,29 @@
 
 <!--feedback form on the right side-->
 
-<div class="leftcolumn">
 
-<div class="card">   
-        <form>
-            <div class="card">
-                
-                <div>
-                    <label for="usename">Username:</label>
+        <div class="card">
+        <form class="loginInput" action="includes/feedback.inc.php" method="POST">
+              <div class="form">  
+                <div class="container">
+                    <label for="username">Username:</label>
                     <input type="text" id="Username" name="username" placeholder="Username">
-                </div>
+                    
 
-                <div>
-                    <label for="Range">Star Rating:</label>
-                    <input type="range" min="1" max="5" value="0" class="slider" id="Range">
+                    
+                    
+                    
+                    
+                    
+                    <label for="Comment">Comment:</label><br>
+                    <input type="text" id="Comment"  name="comment" ><br><br>
+                    
+                    
+                   
+                    <button class="regbutton" type="submit" name="submit" value="submit">submit</button>
                 </div>
-                
-                <div>
-                <label for="Comment">Star Rating:</label>
-                <textarea id="Comment" rows="4" cols="50" name="comment" form="usrform">Enter comment here...</textarea>
-                
-                </div>
-                <div><input type="submit" value="submit"></div>
-
             </div>
         </form>
-</div>
-</div>
 
 
 </body>

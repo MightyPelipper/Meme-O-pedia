@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Login Portal
+    People
 </title>
 
 
@@ -35,37 +35,55 @@
             
         </div>
     </ul> 
-    <!--Actual content-->
 
-    <h1 class="textwhite" align="center">Login</h1>
+<!--Navigation for catagories-->
 
-<!--feedback form on the right side-->
+<h1 class="textwhite" align="center">Meme Database</h1>
 
+<div class="row">
 
-        <div class="card">
-        <form class="loginInput" action="includes/login2.inc.php" method="POST">
-              <div class="form">  
-                <div class="container">
-                    <!--login form-->
-    
-                    <form class="loginInput">
-                    <h3>Adminisrator Login</h3>
-                        <p>Username</p>
-                        <input type="text" name="username" placeholder="Username" ><br>
+<div class="leftcolumn">
+<div class="card">
+      <h3>Catagory</h3>
 
-                        <p>Password</p>
-                        <input type="password" name="password" placeholder="Password"><br>
-                        
-                        <input type="submit" value="login" class="loginbutton" name="submit">
-                    
-                    </form>
+      <ul class="memebar">
+        <li class="memelistpos"><a href="events.php">Events</a></li>
+        <li class="memelistpos"><a href="people.php">People</a></li>
+        <li class="memelistpos"><a href="memes.php">Memes</a></li>
+        
+      </ul> 
 
 
-                    
-    
-                </div>
-            </div>
-        </form>
+
+</div>
+
+</div>
+</div>
+
+<!--Test posts from MYSQL-->
+
+<?php
+
+
+            include_once 'includes/dbh.inc.php';
+            
+            $sql = "SELECT * FROM Memes";
+
+            $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
+
+            echo "<table border='1'>";
+            echo "<tr><td>meme_ID</td> <td>catagory</td> <td>memetext</td> <td>picture</td> </tr>";
+
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "<tr> 
+                <td>{$row['meme_id']}</td> <td>{$row['meme_catagory']}</td> <td>{$row['meme_text']}</td> <td>{$row['meme_pic']}</td>
+
+                </tr>";
+            }
+            echo "</table>"
+
+            
+  ?>          
 
 
 </body>

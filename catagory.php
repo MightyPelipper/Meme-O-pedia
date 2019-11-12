@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Login Portal
+    Catagory
 </title>
 
 
@@ -35,37 +35,29 @@
             
         </div>
     </ul> 
-    <!--Actual content-->
 
-    <h1 class="textwhite" align="center">Login</h1>
+<!--Navigation for catagories-->
 
-<!--feedback form on the right side-->
+<h1 class="textwhite" align="center">Meme Database</h1>
 
+<div class="row">
 
-        <div class="card">
-        <form class="loginInput" action="includes/login2.inc.php" method="POST">
-              <div class="form">  
-                <div class="container">
-                    <!--login form-->
-    
-                    <form class="loginInput">
-                    <h3>Adminisrator Login</h3>
-                        <p>Username</p>
-                        <input type="text" name="username" placeholder="Username" ><br>
+<div class="leftcolumn">
+<div class="card">
+      <h3>Catagory</h3>
 
-                        <p>Password</p>
-                        <input type="password" name="password" placeholder="Password"><br>
-                        
-                        <input type="submit" value="login" class="loginbutton" name="submit">
-                    
-                    </form>
+      <ul class="memebar">
+        <li class="memelistpos"><a href="events.php">Events</a></li>
+        <li class="memelistpos"><a href="people.php">People</a></li>
+        <li class="memelistpos"><a href="memes.php">Memes</a></li>
+        <li class="memelistpos"><a href="includes/test.php">test database button</a></li>
+        
+      </ul> 
 
 
-                    
-    
-                </div>
-            </div>
-        </form>
 
+</div>
 
+</div>
+</div>
 </body>

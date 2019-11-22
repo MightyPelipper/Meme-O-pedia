@@ -67,7 +67,7 @@
 
             include_once 'includes/dbh.inc.php';
             
-            $sql = "SELECT * FROM Memes";
+            $sql = "SELECT * FROM Memes WHERE meme_catagory ='People'";
 
             $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
 
@@ -82,8 +82,24 @@
             }
             echo "</table>"
 
+
+            
+           
+            
+            
             
   ?>          
+<div class="row">
 
+<div class="leftcolumn">
+    <div class="card">
+    <h3>Catagory</h3>
+
+    </div>
+
+</div>
+</div>
 
 </body>
+
+

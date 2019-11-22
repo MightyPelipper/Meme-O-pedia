@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html>
 <head>
-<meta charset="utf-8">
-<title>Login</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<?php
-require('db.php');
-session_start();
-//insert values into the database.
-if (isset($_POST['username'])){
-        // removes backslashes
- $username = stripslashes($_REQUEST['username']);
-        //escapes special characters in a string
- $username = mysqli_real_escape_string($con,$username);
- $password = stripslashes($_REQUEST['password']);
- $password = mysqli_real_escape_string($con,$password);
- //Checks if user existing in the database or not
-        $query = "SELECT * FROM `users` WHERE username='$username'
-and password='".md5($password)."'";
- $result = mysqli_query($con,$query) or die(mysql_error());
- $rows = mysqli_num_rows($result);
-        if($rows==1){
-     $_SESSION['username'] = $username;
-            //Goes to index.php
-     header("Location: index.php");
-         }else{
- echo "<div class='form'>
-<h3>Username/password is incorrect.</h3>
-<br/>Click here to <a href='login.php'>Login</a>
-</div>";
- }
-    }else{
-?>
-<div id="login-box">
-<h1>Log In</h1>
-<form action="" method="post" name="login">
-<input type="text" name="username" placeholder="Username" required />
-<input type="password" name="password" placeholder="Password" required />
-<input name="submit" type="submit" value="Login" />
-</form>
-<p>Not registered yet? <a href='registration.php'>Register Here</a></p>
-</div>
-<?php } ?>
-<div class='right-box'>
+    <!-- Link the stylesheet-->
 
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+
+<title>
+    Login Portal
+</title>
+
+
+
+<body>
+
+    <div class="header">
+        <h1>Meme-o-pedia</h1>
     </div>
+
+    <!--navbar--->
+    <ul class="navbar">
+        <li class="navbarlistpos"><a href="index.php">Home</a></li>
+        <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
+        <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
+        <li class="navbarlistpos"><a href="about.php">About</a></li>
+        <div class="search-container">
+            
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+            
+        </div>
+    </ul> 
+    <!--Actual content-->
+
+    <h1 class="textwhite" align="center">Login</h1>
+
+<!--feedback form on the right side-->
+
+
+        <div class="card">
+        <form class="loginInput" action="includes/login2.inc.php" method="POST">
+              <div class="form">  
+                <div class="container">
+                    <!--login form-->
+    
+                    <form class="loginInput">
+                    <h3>Adminisrator Login</h3>
+                        <p>Username</p>
+                        <input type="text" name="username" placeholder="Username" ><br>
+
+                        <p>Password</p>
+                        <input type="password" name="password" placeholder="Password"><br>
+                        
+                        <input type="submit" value="login" class="loginbutton" name="submit">
+                    
+                    </form>
+
+
+                    
+    
+                </div>
+            </div>
+        </form>
+
+
 </body>
-</html>

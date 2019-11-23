@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Admin Menu
+    Upload Image
 </title>
 
 
@@ -36,24 +36,20 @@
         </div>
     </ul> 
 
-<!--Navigation for catagories-->
-
-<h1 class="textwhite" align="center">Admin Menu</h1>
+    <h1 class="textwhite" align="center">Image Upload</h1>
 
 <div class="row">
 
 <div class="leftcolumn">
 <div class="card">
-      <h3>Admin Powers</h3>
+      <h3>Upload Image for a meme</h3>
 
-      <ul class="memebar">
-        <li class="memelistpos"><a href="postimage.php">Upload images</a></li>
-        <li class="memelistpos"><a href="postmeme.php">Create Meme</a></li>
-        <li class="memelistpos"><a href="register.php">Register Staff</a></li>
-        <li class="memelistpos"><a href="updateMeme.php">Update Meme</a></li>
-        
-        
-      </ul> 
+      <form class="loginInput" action="includes/upload.inc.php" enctype="multipart/form-data" method="POST">
+
+        <label for="fileselect">Upload Image:</label><br>
+        <input type="file" name="file" id="fileselect"><br><br>
+        <button class="regbutton" type="submit" name="submit" value="submit">Upload</button>
+    </form>
 
 
 
@@ -61,4 +57,10 @@
 
 </div>
 </div>
+
+
+
+   
+
+
 </body>

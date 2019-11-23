@@ -45,7 +45,7 @@
 <div class="leftcolumn">
 <div class="card">
      
-     <form class="loginInput" action="includes/postmeme.inc.php" method="POST">
+     <form class="loginInput" action="includes/postmeme.inc.php"  method="POST">
      
         <label for="catagory">Select Catagory:</label><br>
         <select id="catagory" name="memecatagory">
@@ -54,18 +54,23 @@
             <option value="Memes">Meme</option>
         </select><br><br>
 
+        <label for="title">Title:</label><br>
+        <input type="text" id="title"  name="memename" ><br><br>
+
         <label for="description">description:</label><br>
         <input type="text" id="description"  name="memetext" ><br><br>
 
-        <label for="fileselect">Image:</label><br>
+        
+        
+        <label for="fileselect">Select Image to store thats has already been uploaded:</label><br>
         <input type="file" name="memepic" id="fileselect"><br><br>
-
-        <button class="regbutton" type="submit" name="submit" value="submit">submit</button>
-
-
-     <form>
+        
+        <button class="regbutton" type="submit" name="submit" value="submit">Post Submission</button>
 
 
+     </form>
+    
+        
 
 </div>
 

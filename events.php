@@ -59,4 +59,46 @@
 
 </div>
 </div>
+
+
+<!--Test posts from MYSQL-->
+
+<?php
+
+
+            include_once 'includes/dbh.inc.php';
+            
+            $sql = "SELECT * FROM Memes WHERE meme_catagory ='Event'";
+
+            $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
+
+            
+            while($row = mysqli_fetch_assoc($result)) {
+            
+              echo"  <div class='row'>
+
+                <div class='leftcolumn'>
+                    <div class='card'>
+                    <h3>{$row['meme_name']}</h3>
+                    <h5>{$row['meme_catagory']}</h5>
+                    <p>{$row['meme_text']}</p>
+                    <p>{$row['meme_pic']}</p>";
+
+                    echo "<img class='fakeimg' src='uploads/{$row['meme_pic']}'>";
+                    
+                echo"
+                    </div>
+                
+                </div>
+                </div>";
+                
+            
+            }
+           
+            
+            
+            
+  ?>          
+
+
 </body>

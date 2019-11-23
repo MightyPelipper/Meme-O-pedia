@@ -39,9 +39,7 @@ insert into Users values( 1, 'samir', 'mahamed', '123big@gmail.com', 'admin', 'p
 create table Comments (
 
     comment_id int(11) not null Auto_increment,
-    user_id int(11),
-    comment char(256), 
-    foreign key (user_id) references User(user_id),
+    comment char(128), 
     primary key (comment_id)
 );
 

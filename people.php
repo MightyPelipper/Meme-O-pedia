@@ -58,9 +58,29 @@
 </div>
 
 </div>
+<!--The comment sections-->
+<div class="rightcolumn">
+        <div class="card">
+        <form class="loginInput" action="includes/feedback.inc.php" method="POST">
+              <div class="form">  
+                <div class="container">
+                    <label for="Comment">Comment:</label><br>
+                    <input type="text" id="Comment"  name="comment" ><br><br>
+                
+                    <button class="regbutton" type="submit" name="submit" value="submit">submit</button>
+                </div>
+            </div>
+        </form>
+        </div>
+        </div>
+
 </div>
 
-<!--Test posts from MYSQL-->
+
+
+              
+
+<!--Compile posts in a loop -->
 
 <?php
 
@@ -71,34 +91,54 @@
 
             $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
 
-            echo "<table border='1'>";
-            echo "<tr><td>meme_ID</td> <td>catagory</td> <td>memetext</td> <td>picture</td> </tr>";
-
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "<tr> 
-                <td>{$row['meme_id']}</td> <td>{$row['meme_catagory']}</td> <td>{$row['meme_text']}</td> <td>{$row['meme_pic']}</td>
-
-                </tr>";
-            }
-            echo "</table>"
-
-
             
+            while($row = mysqli_fetch_assoc($result)) {
+            
+              echo"  <div class='row'>
+
+                <div class='leftcolumn'>
+                    <div class='card'>
+                    <h3>{$row['meme_name']}</h3>
+                    <h5>{$row['meme_catagory']}</h5>
+                    <p>{$row['meme_text']}</p>
+                    <p>{$row['meme_pic']}</p>";
+
+                    echo "<img class='fakeimg' src='uploads/{$row['meme_pic']}'>";
+                    
+                echo"
+                    </div>
+                
+                </div>
+                </div>";
+                
+            
+            }
            
             
             
             
-  ?>          
-<div class="row">
+  ?>  
 
-<div class="leftcolumn">
-    <div class="card">
-    <h3>Catagory</h3>
 
-    </div>
+  <!--Comments Section--
+        <div class="row">
+        <div class="rightcolumn">
+        <div class="card">
+        <form class="loginInput" action="includes/feedback.inc.php" method="POST">
+              <div class="form">  
+                <div class="container">
+                    <label for="Comment">Comment:</label><br>
+                    <input type="text" id="Comment"  name="comment" ><br><br>
+                
+                    <button class="regbutton" type="submit" name="submit" value="submit">submit</button>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
 
-</div>
-</div>
+        </form>       
+Genereate existing comments-->
 
 </body>
 

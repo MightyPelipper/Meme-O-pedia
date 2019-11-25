@@ -1,3 +1,4 @@
+<?php include("includes/auth.inc.php");?>
 <!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
@@ -46,7 +47,7 @@
 <div class="card">
      
      <form class="loginInput" action="includes/postmeme.inc.php" method="POST">
-     
+     <h2>Welcome <?php echo $_SESSION['userUid']?>   </h2>
         <label for="catagory">Select Catagory:</label><br>
         <select id="catagory" name="memecatagory">
             <option value="Event">Event</option>
@@ -63,8 +64,10 @@
         <button class="regbutton" type="submit" name="submit" value="submit">submit</button>
 
 
-     <form>
-
+     </form>
+<ul class="memebar">
+<li class="memelistpos"><a href="adminmenu.php">back to Admin Menu</a></li>
+<ul>
 
 
 </div>

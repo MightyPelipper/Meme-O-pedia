@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 
 if(isset($_POST['submit'])) {
 
@@ -45,7 +45,8 @@ if(isset($_POST['submit'])) {
                     session_start();
                     $_SESSION['userId']= $row['user_id'];
                     $_SESSION['userUid']= $row['user_uid'];
-
+                    //test for session control
+                        
                     header("Location: ../adminmenu.php?login=Succsess");
                     exit();
 

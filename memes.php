@@ -59,4 +59,106 @@
 
 </div>
 </div>
+
+<!--The comment sections-->
+<div class="rightcolumn">
+        <div class="card">
+        <form class="loginInput" action="includes/comments.inc.php" method="POST">
+        <h2>Comment:</h2>
+              <div class="form">  
+                <div class="container">
+
+
+                    <label for="catagory">Select Catagory:</label><br>
+                    <select id="catagory" name="commentcatagory">
+                        <option value="Event">Event</option>
+                        <option value="People">People</option>
+                        <option value="Memes">Meme</option>
+                    </select><br><br>
+
+
+                    <label for="Comment">Comment:</label><br>
+                    <input type="text" id="Comment"  name="comment" ><br><br>
+                
+                    <button class="regbutton" type="submit" name="submit" value="submit">Post Comment</button>
+                </div>
+            </div>
+        </form>
+        </div>
+        </div>
+
+</div>
+
+
+
+<!--Test posts from MYSQL-->
+
+<?php
+
+
+            include_once 'includes/dbh.inc.php';
+            
+            $sql = "SELECT * FROM Memes WHERE meme_catagory ='Memes'";
+
+            $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
+
+            
+            while($row = mysqli_fetch_assoc($result)) {
+            
+              echo"  <div class='row'>
+
+                <div class='leftcolumn'>
+                    <div class='card'>
+                    <h3>{$row['meme_name']}</h3>
+                    <h5>{$row['meme_catagory']}</h5>
+                    <p>{$row['meme_text']}</p>
+                    <p>{$row['meme_pic']}</p>";
+
+                    echo "<img class='fakeimg' src='uploads/{$row['meme_pic']}'>";
+                    
+                echo"
+                    </div>
+                
+                </div>
+                </div>";
+                
+            
+            }
+           
+            
+            
+            
+  ?>    
+
+<?php
+        //generate comments
+        $sql = "SELECT * FROM comments WHERE comment_catagory ='Memes'";
+
+        $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
+
+
+        while($row = mysqli_fetch_assoc($result)) {
+
+        echo"  <div class='row'>
+
+            <div class='rightcolumn'>
+                <div class='card'>
+                <div class='loginInput'>
+                <h5>Anonymous</h5>
+                <h5>{$row['comment_catagory']}</h5>
+                <h3>{$row['comment']}</h3>";
+                
+            echo"
+                </div>
+            
+            </div>
+            </div>
+            </div>";
+            
+
+}
+
+  ?>      
+
+
 </body>

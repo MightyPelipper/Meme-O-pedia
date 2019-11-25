@@ -1,4 +1,5 @@
 <?php include("includes/auth.inc.php");?>
+
 <!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
@@ -12,7 +13,7 @@
 </head>
 
 <title>
-    Register
+    Feedback
 </title>
 
 
@@ -36,43 +37,42 @@
             
         </div>
     </ul> 
-
     <!--Actual content-->
 
-    <h1 class="textwhite" align="center">Register</h1>
+    <h1 class="textwhite" align="center">User Feedback</h1>
+
+    <?php
+        //generate comments
+        include_once 'includes/dbh.inc.php';
+
+        $sql = "SELECT * FROM feedback";
+
+        $result = mysqli_query($conn, $sql) or die("bad Query: $sql");
 
 
-    <div class="card">
-    <form class="loginInput" action="includes/register2.inc.php" method="POST" >
-    <h2>Welcome <?php echo $_SESSION['userUid']?>   </h2>
-        <div class="form">
+        while($row = mysqli_fetch_assoc($result)) {
 
-        <div class="container">
-            <div class="textWhite"><h2>Create Account</h2></div>
+        echo"  <div class='row'>
 
-            <label for="first"><b>First</b></label>
-            <input type="text" placeholder="First Name" name="first" >
-
-            <label for="Last"><b>Last</b></label>
-            <input type="text" placeholder="Last Name" name="last" >
+            <div class='leftcolumn'>
+                <div class='card'>
+                <div class='loginInput'>
+                <h5>User:  {$row['feed_user']}</h5>
+                <h3>{$row['feed_comm']}</h3>";
+                
+            echo"
+                </div>
             
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="E-mail" name="email" >
+            </div>
+            </div>
+            </div>";
+            
 
-            <label for="uid"><b>Username</b></label>
-            <input type="text" placeholder="Username" name="uid" >
+}
 
-            <label for="pwd"><b>Password</b></label>
-            <input type="password" placeholder="Password" name="pwd" >
-
-            <button class="regbutton" type="submit" name="submit">Create User</button>
-        </div>
-        </div>
-    </form>
-<ul class="memebar">
+  ?> 
+  <ul class="memebar">
 <li class="memelistpos"><a href="adminmenu.php">back to Admin Menu</a></li>
-<ul>
-    </div>
+<ul>    
 
-    
 </body>

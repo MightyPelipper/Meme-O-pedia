@@ -4,7 +4,7 @@ body{
     background-image: url("pics/grad.jpg");
     background-position: center;
     background-color: white;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: 2000px 2000px;
     /*margin: auto;*/
     margin-right: 200px;

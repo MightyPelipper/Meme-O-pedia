@@ -1,3 +1,4 @@
+<?php include("includes/auth.inc.php");?>
 <!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
@@ -42,7 +43,9 @@
 
 <div class="leftcolumn">
 <div class="card">
+<h2>Welcome <?php echo $_SESSION['userUid']?>   </h2>
       <h3>Upload Image for a meme</h3>
+      
 
       <form class="loginInput" action="includes/upload.inc.php" enctype="multipart/form-data" method="POST">
 
@@ -52,7 +55,9 @@
     </form>
 
 
-
+<ul class="memebar">
+<li class="memelistpos"><a href="adminmenu.php">back to Admin Menu</a></li>
+<ul>
 </div>
 
 </div>

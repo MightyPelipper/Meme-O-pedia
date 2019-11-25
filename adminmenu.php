@@ -1,3 +1,4 @@
+<?php include("includes/auth.inc.php");?>
 <!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
@@ -28,6 +29,9 @@
         <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
         <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
+
+        
+
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -44,18 +48,20 @@
 
 <div class="leftcolumn">
 <div class="card">
+<h2>Welcome <?php echo $_SESSION['userUid']?>   </h2>
       <h3>Admin Powers</h3>
-
+        
       <ul class="memebar">
         <li class="memelistpos"><a href="postimage.php">Upload images</a></li>
         <li class="memelistpos"><a href="postmeme.php">Create Meme</a></li>
         <li class="memelistpos"><a href="register.php">Register Staff</a></li>
         <li class="memelistpos"><a href="updateMeme.php">Update Meme</a></li>
+        <li class="memelistpos"><a href="readfeedback.php">Read Feedback</a></li>
+        <li class="memelistpos"><a href="includes/logout.inc.php">Log Off</a></li>
         
         
       </ul> 
-
-
+      
 
 </div>
 

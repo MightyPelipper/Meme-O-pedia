@@ -15,7 +15,7 @@ if (isset($_POST['submit'])){
 
     //check if inputs are empty
     if(empty($uid) || empty($pwd)) {
-        header("Location: ../login.php?login=empty");
+        header("Location: ../register.php?login=empty");
         exit();
     } 
     

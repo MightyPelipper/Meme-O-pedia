@@ -1,3 +1,8 @@
+
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <head>
     <!-- Link the stylesheet-->
@@ -51,15 +56,22 @@
                     <form class="loginInput">
                     <h3>Adminisrator Login</h3>
                         <p>Username</p>
-                        <input type="text" name="username" placeholder="Username" ><br>
+                        <input type="text" name="username" placeholder="Username"  ><br>
 
                         <p>Password</p>
-                        <input type="password" name="password" placeholder="Password"><br>
+                        <input type="password" name="password" placeholder="Password" ><br>
                         
                         <input type="submit" value="login" class="loginbutton" name="submit">
                     
                     </form>
-
+                    
+                <?php
+                //error checking
+                    if(isset($_SESSION["error"])){
+                        $error = $_SESSION["error"];
+                        echo "<span>$error</span>";
+                    }
+                ?>  
 
                     
     
@@ -69,3 +81,7 @@
 
 
 </body>
+
+<?php
+    unset($_SESSION["error"]);
+?>

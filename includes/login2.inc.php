@@ -14,6 +14,8 @@ if(isset($_POST['submit'])) {
     //check if inputs are empty
     if(empty($uid) || empty($pwd)) {
         header("Location: ../login.php?login=emptyfields");
+        $error = "Empty Username or Password Fields";
+        $_SESSION["error"] = $error; //send error message
         exit();
     }
 
@@ -25,6 +27,8 @@ if(isset($_POST['submit'])) {
         if(!mysqli_stmt_prepare($stmt, $sql)){
 
             header("Location: ../login.php?error=sqlerror");
+            $error = "SQL Error try again";
+            $_SESSION["error"] = $error; //send error message
             exit();
         }
 
@@ -37,6 +41,8 @@ if(isset($_POST['submit'])) {
 
                 if($pwdCheck == false){
                     header("Location: ../login.php?error=wrongpassword");
+                    $error = "Wrong Password Try again";
+                    $_SESSION["error"] = $error; //send error message
                     exit();
                 }
 
@@ -65,6 +71,8 @@ if(isset($_POST['submit'])) {
 
             else{
                 header("Location: ../login.php?error=nouser");
+                $error = "That username does not exsist.";
+                $_SESSION["error"] = $error; //send error message
                 exit();
             }
 

@@ -11,7 +11,7 @@
 </head>
 
 <title>
-    Catagory
+    Category
 </title>
 
 
@@ -25,8 +25,8 @@
     <!--navbar--->
     <ul class="navbar">
         <li class="navbarlistpos"><a href="index.php">Home</a></li>
-        <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
-        <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
+        <li class="navbarlistpos"><a href="catagory.php">Category</a></li>
+        <li class="navbarlistpos"><a href="feedback.php">Feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
         <div class="search-container">
             
@@ -44,7 +44,7 @@
 
 <div class="leftcolumn">
 <div class="card">
-      <h3>Catagory</h3>
+      <h3>Category</h3>
 
       <ul class="memebar">
         <li class="memelistpos"><a href="events.php">Events</a></li>

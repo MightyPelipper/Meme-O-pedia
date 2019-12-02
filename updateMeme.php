@@ -26,8 +26,8 @@
     <!--navbar--->
     <ul class="navbar">
         <li class="navbarlistpos"><a href="index.php">Home</a></li>
-        <li class="navbarlistpos"><a href="catagory.php">Catagory</a></li>
-        <li class="navbarlistpos"><a href="feedback.php">feedback</a></li>
+        <li class="navbarlistpos"><a href="catagory.php">Category</a></li>
+        <li class="navbarlistpos"><a href="feedback.php">Feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
         <div class="search-container">
             
@@ -48,7 +48,7 @@
      
      <form class="loginInput" action="includes/postmeme.inc.php" method="POST">
      <h2>Welcome <?php echo $_SESSION['userUid']?>   </h2>
-        <label for="catagory">Select Catagory:</label><br>
+        <label for="catagory">Select Category:</label><br>
         <select id="catagory" name="memecatagory">
             <option value="Event">Event</option>
             <option value="People">People</option>

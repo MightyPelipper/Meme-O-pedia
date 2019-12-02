@@ -19,6 +19,8 @@ if(isset($_POST['submit'])) {
         exit();
     }
 
+    
+
     else {
         $sql = "SELECT * FROM Users WHERE user_uid=? or user_email=?;";
 

@@ -13,12 +13,44 @@ if (isset($_POST['submit'])){
 
 
 
-    //check if inputs are empty
-    if(empty($uid) || empty($pwd)) {
-        header("Location: ../register.php?login=empty");
+    //check if inputs are empty and filter inputs
+    if(empty($uid) || empty($pwd) || empty($first) || empty($last) || empty($email) ) {
+        header("Location: ../register.php?register=empty");
         exit();
     } 
-    
+
+    elseif(!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $uid)){
+        header("Location: ../register.php?register=invalidmailandusername");
+        exit();
+
+    }
+
+    elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        header("Location: ../register.php?register=invalidmailandusername".$uid);
+        exit();
+
+    }
+
+    elseif(!preg_match("/^[a-zA-Z0-9]*$/", $uid)){
+        header("Location: ../register.php?register=invalidmailandusername".$email);
+        exit();
+
+    }
+
+    elseif(!preg_match("/^[a-zA-Z0-9]*$/", $first)){
+        header("Location: ../register.php?register=invalidFirstName".$first);
+        exit();
+
+    }
+
+    elseif(!preg_match("/^[a-zA-Z0-9]*$/", $last)){
+        header("Location: ../register.php?register=invalidLastName".$last);
+        exit();
+
+    }
+
+
+    //now send through database
     else {
 
         $sql = "SELECT * FROM Users WHERE user_uid=?";

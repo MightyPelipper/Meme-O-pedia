@@ -12,7 +12,8 @@ if (isset($_POST['submit'])){
 
     
     //error handelers
-
+    //htmlspecialchars();
+    //htmlentities();
     //check for empty fields
     if(empty($catagory) ||  empty($comment)  ){
 

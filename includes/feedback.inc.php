@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 
 if (isset($_POST['submit'])){
 
@@ -17,6 +17,8 @@ if (isset($_POST['submit'])){
     if(empty($username) ||  empty($comment)  ){
 
         header("Location: ../feedback.php?feedback=empty");
+        $error = "Empty Fields Try Again";
+        $_SESSION["error"] = $error; //send error message
         exit(); 
 
     } else {

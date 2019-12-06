@@ -2,7 +2,7 @@
 
 //file upload check
 
-
+session_start();
 
 
 
@@ -33,6 +33,8 @@ if (isset($_POST['submit'])){
     if ( empty($catagory) || empty($name) || empty($text) || empty($pic)  ){
 
         header("Location: ../postmeme.php?postmeme=empty");
+        $error = "Empty Fields Try Again";
+        $_SESSION["error"] = $error; //send error message
         exit(); 
     
         //insert into database

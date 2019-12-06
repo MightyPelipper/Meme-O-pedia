@@ -29,6 +29,17 @@
         <li class="navbarlistpos"><a href="catagory.php">Category</a></li>
         <li class="navbarlistpos"><a href="feedback.php">Feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
+        
+
+        <?php
+            if($_SESSION['userUid']){
+                echo "<li class='navbarlistpos'><a href='adminmenu.php'>Admin Menu</a></li>";
+            }else{
+                echo "<li class='navbarlistpos'><a href='login.php'>Admin Login</a></li>";
+            }
+        ?>
+
+
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -52,6 +63,13 @@
         <label for="fileselect">Upload Image:</label><br>
         <input type="file" name="file" id="fileselect"><br><br>
         <button class="regbutton" type="submit" name="submit" value="submit">Upload</button>
+        <?php
+                //error checking
+                    if(isset($_SESSION["error"])){
+                        $error = $_SESSION["error"];
+                        echo "<span>$error</span>";
+                    }
+                ?>  
     </form>
 
 
@@ -69,3 +87,6 @@
 
 
 </body>
+<?php
+    unset($_SESSION["error"]);
+?>

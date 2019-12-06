@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 
 if (isset($_POST['submit'])){
@@ -26,19 +27,30 @@ if (isset($_POST['submit'])){
                 $fileDestination= '../uploads/' . $fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
                 header("Location: ../postimage.php?uploadSucsess");
+                $error = "Upload Sucsess!";
+                $_SESSION["error"] = $error; //send error message
 
             } else {
                 echo "Your file is too BIG!!";
+                header("Location: ../postimage.php?uploadSucsess");
+                $error = "Your Image is too BIG!!";
+                $_SESSION["error"] = $error; //send error message
             }
 
         } else {
             echo "There was an error uploading your file!!";
+            header("Location: ../postimage.php?uploadSucsess");
+            $error = "Error Uploading your File";
+            $_SESSION["error"] = $error; //send error message
         }
 
 
     } else{
 
         echo "You cannot upload files of this type!!";
+        header("Location: ../postimage.php?uploadSucsess");
+        $error = "You Cannot Upload Files of This Type";
+        $_SESSION["error"] = $error; //send error message
 
     }
 

@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if (isset($_POST['submit'])){
 
     include_once 'dbh.inc.php';
@@ -17,6 +19,8 @@ if (isset($_POST['submit'])){
     if(empty($first) ||  empty($last) ||  empty($email) || empty($uid) || empty($pwd)    ){
 
         header("Location: ../register.php?register=empty");
+        $error = "Empty Fields Try Again";
+        $_SESSION["error"] = $error; //send error message
         exit(); 
 
     } else {
@@ -24,6 +28,8 @@ if (isset($_POST['submit'])){
         if(!preg_match("/^[a-zA-Z]*$/", $first) ||  !preg_match("/^[a-zA-Z]*$/", $last)){
 
             header("Location: ../register.php?register=invalid");
+            $error = "Invalid characters";
+        $_SESSION["error"] = $error; //send error message
             exit(); 
 
         } else{
@@ -31,6 +37,8 @@ if (isset($_POST['submit'])){
             if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 
                 header("Location: ../register.php?register=email");
+                $error = "Incorrect Email Format";
+                $_SESSION["error"] = $error; //send error message
                 exit(); 
             } else{
                 $sql = "SELECT * FROM Users WHERE user_uid='$uid'";
@@ -40,6 +48,8 @@ if (isset($_POST['submit'])){
                 if($resultCheck > 0){
                     
                     header("Location: ../register.php?register=usertaken");
+                    $error = "Username Taken Try Again";
+                    $_SESSION["error"] = $error; //send error message
                     exit();
 
                 } else {

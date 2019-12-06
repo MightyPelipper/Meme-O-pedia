@@ -28,6 +28,15 @@
         <li class="navbarlistpos"><a href="catagory.php">Category</a></li>
         <li class="navbarlistpos"><a href="feedback.php">Feedback</a></li>
         <li class="navbarlistpos"><a href="about.php">About</a></li>
+        <?php
+            //display admin login or admin menu link if logged on
+            if(@$_SESSION['userUid']){
+                
+                echo "<li class='navbarlistpos'><a href='adminmenu.php'>Admin Menu</a></li>";
+            }else{
+                echo "<li class='navbarlistpos'><a href='login.php'>Admin Login</a></li>";
+            }
+        ?>
         <div class="search-container">
             
             <input type="text" placeholder="Search.." name="search">
@@ -50,6 +59,7 @@
         <li class="memelistpos"><a href="events.php">Events</a></li>
         <li class="memelistpos"><a href="people.php">People</a></li>
         <li class="memelistpos"><a href="memes.php">Memes</a></li>
+        
         
       </ul> 
 

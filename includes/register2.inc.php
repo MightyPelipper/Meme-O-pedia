@@ -16,35 +16,47 @@ if (isset($_POST['submit'])){
     //check if inputs are empty and filter inputs
     if(empty($uid) || empty($pwd) || empty($first) || empty($last) || empty($email) ) {
         header("Location: ../register.php?register=empty");
+        $error = "Empty Fields Try Again";
+        $_SESSION["error"] = $error; //send error message
         exit();
     } 
 
     elseif(!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $uid)){
         header("Location: ../register.php?register=invalidmailandusername");
+        $error = "Invalid Username and Email Format";
+        $_SESSION["error"] = $error; //send error message
         exit();
 
     }
 
     elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         header("Location: ../register.php?register=invalidmailandusername".$uid);
+        $error = "Invalid Email Format";
+        $_SESSION["error"] = $error; //send error message
         exit();
 
     }
 
     elseif(!preg_match("/^[a-zA-Z0-9]*$/", $uid)){
         header("Location: ../register.php?register=invalidmailandusername".$email);
+        $error = "Invalid Username Format";
+        $_SESSION["error"] = $error; //send error message
         exit();
 
     }
 
     elseif(!preg_match("/^[a-zA-Z0-9]*$/", $first)){
         header("Location: ../register.php?register=invalidFirstName".$first);
+        $error = "Invalid First Name Format";
+        $_SESSION["error"] = $error; //send error message
         exit();
 
     }
 
     elseif(!preg_match("/^[a-zA-Z0-9]*$/", $last)){
         header("Location: ../register.php?register=invalidLastName".$last);
+        $error = "Invalid Last Name Format";
+        $_SESSION["error"] = $error; //send error message
         exit();
 
     }
@@ -60,6 +72,8 @@ if (isset($_POST['submit'])){
         if(!mysqli_stmt_prepare($stmt,$sql)){
 
             header("Location: ../register.php?login=sqlerror");
+            $error = "There was an SQL error!!";
+            $_SESSION["error"] = $error; //send error message
             exit();
         }
 
@@ -71,6 +85,8 @@ if (isset($_POST['submit'])){
             if ($resultCheck > 0) {
 
                 header("Location: ../register.php?error=usertaken=".$uid);
+                $error = "Username Taken Try Again";
+                $_SESSION["error"] = $error; //send error message
                 exit();
             }
 
@@ -80,6 +96,8 @@ if (isset($_POST['submit'])){
                 if(!mysqli_stmt_prepare($stmt,$sql)){
 
                     header("Location: ../register.php?error=sqlerror");
+                    $error = "SQL error Number 2!!";
+                    $_SESSION["error"] = $error; //send error message
                     exit();
                 }
                 else{

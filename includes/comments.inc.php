@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 
 if (isset($_POST['submit'])){
 
@@ -18,6 +18,8 @@ if (isset($_POST['submit'])){
     if(empty($catagory) ||  empty($comment)  ){
 
         header("Location: ../catagory.php?comment=empty");
+        $error = "Empty Fields in comment submission try again";
+        $_SESSION["error"] = $error; //send error message
         exit(); 
 
     } else {

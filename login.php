@@ -58,7 +58,7 @@ session_start();
 
 
         <div class="card">
-        <form class="loginInput" action="includes/login2.inc.php" method="POST">
+        <form class="loginInput" action="includes/login3.inc.php" method="POST">
               <div class="form">  
                 <div class="container">
                     <!--login form-->

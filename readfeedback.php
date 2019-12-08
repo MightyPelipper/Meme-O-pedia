@@ -60,7 +60,7 @@
 
 
         while($row = mysqli_fetch_assoc($result)) {
-
+            htmlspecialchars($row);
         echo"  <div class='row'>
 
             <div class='leftcolumn'>

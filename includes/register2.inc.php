@@ -102,9 +102,9 @@ if (isset($_POST['submit'])){
                 }
                 else{
                     
-                    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+                    //$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-                    mysqli_stmt_bind_param($stmt, "sssss", $first,$last,$email,$uid,$hashedPwd);
+                    mysqli_stmt_bind_param($stmt, "sssss", $first,$last,$email,$uid,$pwd);
                     mysqli_stmt_execute($stmt);
 
                     header("Location: ../register.php?signup=sucsess");
